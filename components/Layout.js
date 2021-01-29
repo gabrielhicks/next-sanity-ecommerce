@@ -157,7 +157,7 @@ function Layout({ children }) {
           </div>
         </div>
       </Stack>
-      <main className="mt-48">{children}</main>
+      <main className="mt-48 mb-8">{children}</main>
       <footer className="bg-gray-200">
         <div className="container mx-auto px-6 py-3 flex justify-between items-center">
           <a
