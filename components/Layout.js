@@ -1,4 +1,27 @@
 import { useState } from "react";
+import React from "react";
+import {
+  useColorMode,
+  useColorModeValue,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  IconButton,
+  Button,
+  Stack,
+  // ChakraLink as Link,
+  MenuDivider,
+  MenuGroup,
+} from "@chakra-ui/react";
+import NextLink from "next/link";
+import {
+  ChevronDownIcon,
+  EmailIcon,
+  ExternalLinkIcon,
+  MoonIcon,
+  SunIcon,
+} from "@chakra-ui/icons";
 import Link from "next/link";
 
 function Layout({ children }) {
@@ -6,10 +29,39 @@ function Layout({ children }) {
   const [cartOpen, setCartOpen] = useState(false);
   const handleMenu = () => setMenuOpen(!menuOpen);
   const handleOpen = () => setCartOpen(!cartOpen);
+  const { toggleColorMode: toggleMode } = useColorMode();
+  const text = useColorModeValue("dark", "light");
+  const SwitchIcon = useColorModeValue(MoonIcon, SunIcon);
+  const menuToggle = useColorModeValue("black", "white");
+  const navToggle = useColorModeValue(
+    { backdropFilter: "blur(20px)" },
+    {
+      backdropFilter: "blur(20px)",
+    }
+  );
+
   return (
-    <div className="bg-white">
-      <header>
-        <div className="container mx-auto px-6 py-3">
+    <>
+      {/* <IconButton
+        position="fixed"
+        top="1rem"
+        right="1rem"
+        aria-label={`Switch to ${text} mode`}
+        variant="ghost"
+        zIndex="10"
+        onClick={toggleMode}
+        icon={<SwitchIcon />}
+      /> */}
+      <Stack
+        as="header"
+        // height="4.5rem"
+        zIndex="1"
+        style={navToggle}
+        position="fixed"
+        top="0"
+        width="100%"
+      >
+        <div className="container mx-auto px-6 py-2">
           <div className="flex items-center justify-between">
             <div className="hidden w-full text-gray-600 md:flex md:items-center">
               <svg
@@ -118,12 +170,8 @@ function Layout({ children }) {
             />
           </div>
         </div>
-      </header>
-      {/*
-      // This Cart doesn't really work… yet!
-      <Cart cartOpen={cartOpen} handleOpen={handleOpen} />
-      */}
-      <main className="my-8">{children}</main>
+      </Stack>
+      <main className="mt-48">{children}</main>
       <footer className="bg-gray-200">
         <div className="container mx-auto px-6 py-3 flex justify-between items-center">
           <a
@@ -135,7 +183,107 @@ function Layout({ children }) {
           <p className="py-2 text-gray-500 sm:py-0">All rights reserved</p>
         </div>
       </footer>
-    </div>
+    </>
+    /* <Stack
+          direction="row"
+          position="fixed"
+          top="1rem"
+          left="1rem"
+          spacing={1}
+          align="center"
+        >
+          <NextLink href="/" passHref>
+            <Button variant="outline" colorScheme="green">
+              Home
+            </Button>
+          </NextLink>
+          <NextLink href="/blog" passHref>
+            <Button variant="outline" colorScheme="green">
+              Blog
+            </Button>
+          </NextLink>
+          <Menu>
+            <MenuButton
+              colorScheme="green"
+              as={Button}
+              rightIcon={<ChevronDownIcon />}
+            >
+              More
+            </MenuButton>
+            <MenuList color={menuToggle}>
+              <MenuGroup title="Social">
+                <MenuItem
+                  component={Link}
+                  as="a"
+                  alt="Opens in a new window"
+                  target="_blank"
+                  rel="noreferrer"
+                  href={"https://www.linkedin.com/in/gabrieljhicks/"}
+                  icon={<ExternalLinkIcon />}
+                >
+                  LinkedIn
+                </MenuItem>
+                <MenuItem
+                  component={Link}
+                  as="a"
+                  alt="Opens in a new window"
+                  target="_blank"
+                  rel="noreferrer"
+                  href={"https://github.com/gabrielhicks/"}
+                  icon={<ExternalLinkIcon />}
+                >
+                  GitHub
+                </MenuItem>
+                <MenuItem
+                  component={Link}
+                  as="a"
+                  alt="Opens in a new window"
+                  target="_blank"
+                  rel="noreferrer"
+                  href={"https://twitter.com/gabrielhicksdev"}
+                  icon={<ExternalLinkIcon />}
+                >
+                  Twitter
+                </MenuItem>
+              </MenuGroup>
+              <MenuDivider />
+              <MenuGroup title="Contact">
+                <MenuItem
+                  component={Link}
+                  as="a"
+                  alt="Opens in a new window"
+                  target="_blank"
+                  rel="noreferrer"
+                  href={"https://gabrielhicks.dev/HicksResume.pdf"}
+                  icon={<ExternalLinkIcon />}
+                >
+                  Resume
+                </MenuItem>
+                <MenuItem
+                  component={Link}
+                  as="a"
+                  alt="Opens in a new window"
+                  target="_blank"
+                  rel="noreferrer"
+                  href={"mailto:me@gabrielhicks.dev"}
+                  icon={<EmailIcon />}
+                >
+                  Email
+                </MenuItem>
+              </MenuGroup>
+            </MenuList>
+          </Menu>
+          <IconButton
+            position="fixed"
+            top="1rem"
+            right="1rem"
+            aria-label={`Switch to ${text} mode`}
+            variant="ghost"
+            onClick={toggleMode}
+            icon={<SwitchIcon />}
+          />
+        </Stack>
+      </Stack> */
   );
 }
 
