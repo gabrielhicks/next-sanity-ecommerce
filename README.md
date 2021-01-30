@@ -1,6 +1,6 @@
 # from Jungle to Jungle || Sanity.io and Next.js Ecommerce Application
 
-JAMstack is great beacuse of its lightweight, easy to use nature along with all of the security features that are sometimes heavy and tedious to build out. As a frontend developer, I don't always enjoy spending hours building out servers. I am able to and do enjoy some backend work, but my intention is to experiment and work with Headless CMS (less backend work) and to see how I can create a collaborative experience and environment. My fiance is interested in one day creating a plant store to sell or trade her plants and propogations, so she will be helping upload and manage content through the CMS side as I develop and customize the frontend size to her specifications.
+JAMstack is great beacuse of its lightweight, easy to use nature along with all of the security features that are sometimes heavy and tedious to build out. As a frontend developer, I don't always enjoy spending hours building out servers. I am able to and do enjoy some backend work, but my intention is to experiment and work with Headless CMS (less backend work) and to see how I can create a collaborative experience and environment. My fiance is interested in one day creating a plant store to sell or trade her plants and propogations, so she will be helping upload and manage content through the CMS side as I develop and customize the frontend to her specifications.
 
 **You can find her plant instagram at: [fromjungletojungle](https://www.instagram.com/fromjungletojungle/)**
 
