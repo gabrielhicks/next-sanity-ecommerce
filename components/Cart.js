@@ -1,4 +1,4 @@
-function Cart({ cartOpen, handleOpen }) {
+function Cart() {
   return (
     <>
       <hr className="my-3" />
