@@ -25,7 +25,7 @@ export default class Document extends NextDocument {
             hidden
             id="snipcart"
             data-api-key="ZjJjNWQxOGMtNWZlYy00Nzk4LWIwZTQtYTllMTU3ZTY0OWYxNjM3NDc3MDcwNTg0MjgyODk1"
-            // data-config-modal-style="side"
+            data-config-modal-style="side"
           ></div>
         </body>
       </Html>

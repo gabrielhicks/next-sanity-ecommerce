@@ -8,7 +8,6 @@ function ProductCard({
   slug,
   defaultProductVariant,
   blurb,
-  price,
 }) {
   return (
     <Link href={`/products/${slug.current}`}>
