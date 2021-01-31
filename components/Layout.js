@@ -81,7 +81,7 @@ function Layout({ children }) {
                 // onClick={handleOpen}
                 className="snipcart-checkout text-gray-600 focus:outline-none mx-4 sm:mx-0"
               >
-                <svg
+                {/* <svg
                   className="h-5 w-5"
                   fill="none"
                   strokeLinecap="round"
@@ -91,6 +91,21 @@ function Layout({ children }) {
                   stroke="currentColor"
                 >
                   <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg> */}
+                <svg
+                  viewBox="0 0 64 64"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  alt=""
+                  title=""
+                  className="snipcart-cart-header__icon snipcart__icon--black-dark snipcart__icon"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M51.714 20.47L55 60H9l3.286-39.53h9.857v-6.588C22.143 8.424 26.556 4 32 4c5.444 0 9.857 4.424 9.857 9.882v6.589h9.857zM25.43 13.883v16.47h-3.286v-6.587h-6.834l-2.737 32.94h38.856l-2.737-32.94h-6.834v6.588h-3.286v-16.47c0-3.634-2.947-6.589-6.571-6.589-3.624 0-6.571 2.955-6.571 6.588zm3.285 9.883V20.47h6.572v3.294h-6.572z"
+                    fill="#313749"
+                  ></path>
                 </svg>
               </button>
               {/* <div
