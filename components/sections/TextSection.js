@@ -5,7 +5,7 @@ function TextSection(props) {
   return (
     <div>
       <div className="container mx-auto px-6">
-        <div className="md:flex md:items-center">
+        <div className="text-center text-2xl lg:text-5xl md:items-center md:text-2xl md:text-center">
           {text && <PortableText blocks={text} />}
         </div>
       </div>
