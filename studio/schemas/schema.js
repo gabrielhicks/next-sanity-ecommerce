@@ -30,6 +30,7 @@ import contactInfo from "./objects/contactInfo";
 
 // Landing page sections
 import hero from "./objects/hero";
+import hero2 from "./objects/hero2";
 import imageSection from "./objects/imageSection";
 import textSection from "./objects/textSection";
 
@@ -64,6 +65,7 @@ export default createSchema({
     internalLink,
     link,
     hero,
+    hero2,
     imageSection,
     textSection,
     portableText,
