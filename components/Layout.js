@@ -23,7 +23,6 @@ import {
   SunIcon,
 } from "@chakra-ui/icons";
 import Link from "next/link";
-import Cart from "./Cart";
 
 function Layout({ children }) {
   const [menuOpen, setMenuOpen] = useState(false);

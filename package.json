@@ -23,16 +23,16 @@
     "react-dom": "^17.0.1"
   },
   "devDependencies": {
-    "@sanity/cli": "^2.0.9",
-    "concurrently": "^5.3.0",
-    "lerna": "^3.22.1",
-    "postcss-flexbugs-fixes": "4.2.1",
-    "postcss-preset-env": "^6.7.0",
     "@chakra-ui/icons": "^1.0.0",
     "@chakra-ui/react": "^1.0.0",
     "@emotion/react": "^11.0.0",
     "@emotion/styled": "^11.0.0",
+    "@sanity/cli": "^2.0.9",
+    "concurrently": "^5.3.0",
     "framer-motion": "^2.9.4",
+    "lerna": "^3.22.1",
+    "postcss-flexbugs-fixes": "4.2.1",
+    "postcss-preset-env": "^6.7.0",
     "prettier": "^2.1.2",
     "sanity-template": "^2.1.1",
     "tailwindcss": "^1.9.6"
