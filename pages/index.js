@@ -2,6 +2,7 @@ import Error from "next/error";
 import { useRouter } from "next/router";
 import { getClient, usePreviewSubscription } from "../utils/sanity";
 import ProductsPage from "../components/ProductsPage";
+import { Box } from "@chakra-ui/react";
 
 const query = `//groq
   *[_type == "product" && defined(slug.current)]
@@ -20,11 +21,11 @@ function IndexPage(props) {
   });
 
   return (
-    <div className="my-8">
-      <div className="mt-4">
+    <Box my={8}>
+      <Box mt={4}>
         <ProductsPage products={products} />
-      </div>
-    </div>
+      </Box>
+    </Box>
   );
 }
 
